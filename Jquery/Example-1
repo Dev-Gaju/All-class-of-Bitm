@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>jQuery Demo Example</title>
+
+<script src="jquery-3.4.1.js" ></script>
+
+    <style>
+        #pan,#pan2{
+            padding: 5px;
+            background-color: wheat;
+            text-align: center;
+            border: solid 1px yellow;
+        }
+        #pan2{
+            padding: 30px;
+            display none;
+        }
+         
+
+    </style>
+        
+</head>
+<body>
+    <button>Click Here </button><br>
+    <button id="stop">Stop</button>
+
+    
+    <div id="pan">Click here to show details</div>
+    <div id="pan2">Whole article is here</div>
+
+    <div id="one" style="height: 120px; width:150px; background-color: green; position: absolute; margin-top: 10px ">   HELLO</div>
+
+   <script >
+    
+       // $("#pan").click(function(){
+       //  $("#pan2").slideUp('slow');
+       //  });
+
+       $('button').click(function(){
+        var btn=$('#one');
+        btn.animate({left:'1000px'},1000);
+        btn.animate({fontSize:'40px'},'slow');
+       });
+       $('#stop').click(function(){
+        $('#one').stop();
+
+       });
+
+   </script>
+
+</body>
+</html>
